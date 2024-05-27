@@ -7,10 +7,7 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac0f18cc-98c2-4ee1-afdd-7b0f1781711f" name="Changes" comment="Solve 02_variables">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/03_ticket_v1/09_heap/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/03_ticket_v1/09_heap/src/lib.rs" afterDir="false" />
-    </list>
+    <list default="true" id="ac0f18cc-98c2-4ee1-afdd-7b0f1781711f" name="Changes" comment="Solve 02_variables" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -163,7 +160,7 @@
       <workItem from="1716724319231" duration="3636000" />
       <workItem from="1716750374905" duration="1669000" />
       <workItem from="1716790944268" duration="5788000" />
-      <workItem from="1716833382411" duration="1404000" />
+      <workItem from="1716833382411" duration="1787000" />
     </task>
     <task id="LOCAL-00001" summary="Add ide setting files to the .gitignore">
       <option name="closed" value="true" />
