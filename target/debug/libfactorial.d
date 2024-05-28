@@ -1,1 +1,0 @@
-/home/peter/RustroverProjects/100-exercises-to-learn-rust/target/debug/libfactorial.rlib: /home/peter/RustroverProjects/100-exercises-to-learn-rust/exercises/02_basic_calculator/05_factorial/src/lib.rs

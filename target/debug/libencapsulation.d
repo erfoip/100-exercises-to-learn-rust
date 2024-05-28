@@ -1,1 +1,0 @@
-/home/peter/RustroverProjects/100-exercises-to-learn-rust/target/debug/libencapsulation.rlib: /home/peter/RustroverProjects/100-exercises-to-learn-rust/exercises/03_ticket_v1/05_encapsulation/src/lib.rs

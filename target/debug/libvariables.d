@@ -1,1 +1,0 @@
-/home/peter/RustroverProjects/100-exercises-to-learn-rust/target/debug/libvariables.rlib: /home/peter/RustroverProjects/100-exercises-to-learn-rust/exercises/02_basic_calculator/02_variables/src/lib.rs
