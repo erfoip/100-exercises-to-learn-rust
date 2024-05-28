@@ -1,0 +1,1 @@
+/home/peter/RustroverProjects/100-exercises-to-learn-rust/target/debug/libas_cast.rlib: /home/peter/RustroverProjects/100-exercises-to-learn-rust/exercises/02_basic_calculator/10_as_casting/src/lib.rs
