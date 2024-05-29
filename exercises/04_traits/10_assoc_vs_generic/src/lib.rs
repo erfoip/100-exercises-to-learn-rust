@@ -13,6 +13,11 @@
 // You don't have to though: it's perfectly okay to write three separate
 // implementations manually. Venture further only if you're curious.
 
+pub trait Power<Exponent = Self>{
+    type OtherType;
+    fn power(&self: Exponent, other: Self::OtherType) -> Exponent;
+}
+
 #[cfg(test)]
 mod tests {
     use super::Power;
