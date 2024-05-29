@@ -14,8 +14,32 @@
 // implementations manually. Venture further only if you're curious.
 
 pub trait Power<Exponent = Self>{
-    type OtherType;
-    fn power(&self: Exponent, other: Self::OtherType) -> Exponent;
+    type Output;
+    fn power(&self: Self::Output, other: Exponent) -> Self::Output;
+}
+
+impl Power<u16> for u32{
+    type Output = u32;
+
+    fn power(&self: Self::Output, other: u16) -> Self::Output {
+        self.pow(other.into())
+    }
+}
+
+impl Power<u32> for u32{
+    type Output = u32;
+
+    fn power(&self: Self::Output, other: u32) -> Self::Output {
+        self.pow(other.into())
+    }
+}
+
+impl Power<&u32> for u32{
+    type Output = u32;
+
+    fn power(&self: Self::Output, other: &u32) -> Self::Output {
+        self.pow(*other.into())
+    }
 }
 
 #[cfg(test)]
