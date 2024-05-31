@@ -11,7 +11,7 @@
 
 use std::ops::Add;
 
-#[derive(Debug, PartialEq)]
+#[derive(Debug, Clone, Copy, PartialEq)]
 pub struct SaturatingU16 {
     value: u16,
 }
@@ -67,7 +67,7 @@ impl Add for SaturatingU16 {
 impl Add<u16> for SaturatingU16 {
     type Output = SaturatingU16;
 
-    fn add(&self, rhs: u16) -> Self::Output {
+    fn add(self, rhs: u16) -> Self::Output {
         SaturatingU16 {
             value: self.value.saturating_add(rhs)
         }
@@ -77,7 +77,7 @@ impl Add<u16> for SaturatingU16 {
 impl Add<&u16> for SaturatingU16 {
     type Output = SaturatingU16;
 
-    fn add(&self, rhs: &u16) -> Self::Output {
+    fn add(self, rhs: &u16) -> Self::Output {
         SaturatingU16 {
             value: self.value.saturating_add(*rhs)
         }
@@ -87,7 +87,7 @@ impl Add<&u16> for SaturatingU16 {
 impl Add<&SaturatingU16> for SaturatingU16 {
     type Output = SaturatingU16;
 
-    fn add(&self, rhs: &SaturatingU16) -> Self::Output {
+    fn add(self, rhs: &SaturatingU16) -> Self::Output {
         SaturatingU16 {
             value: self.value.saturating_add(rhs.value)
         }
