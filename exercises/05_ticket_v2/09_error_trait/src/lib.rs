@@ -3,9 +3,7 @@
 //  The docs for the `std::fmt` module are a good place to start and look for examples:
 //  https://doc.rust-lang.org/std/fmt/index.html#write
 
-use std::collections::hash_set::Difference;
-use std::fmt::{Display, Formatter, write};
-use std::os::linux::raw::stat;
+use std::fmt::{Display, Formatter};
 use std::error::Error;
 
 #[derive(Debug)]
@@ -17,13 +15,13 @@ enum TicketNewError {
 impl Display for TicketNewError {
     fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
         match self {
-            TicketNewError::TitleError(err) => { write!(f, "Title error: {}", err) }
-            TicketNewError::DescriptionError(err) => { write!(f, "Description error: {}", err) }
+            TicketNewError::TitleError(err) => { write!(f, "{}", err) }
+            TicketNewError::DescriptionError(err) => { write!(f, "{}", err) }
         }
     }
 }
 
-
+impl Error for TicketNewError {}
 
 
 // TODO: `easy_ticket` should panic when the title is invalid, using the error message
