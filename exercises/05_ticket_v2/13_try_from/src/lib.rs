@@ -1,7 +1,11 @@
 // TODO: Implement `TryFrom<String>` and `TryFrom<&str>` for `Status`.
 //  The parsing should be case-insensitive.
 
-#[derive(Error, this::error)]
+use thiserror::Error;
+
+#[derive(Debug, thiserror::Error)]
+#[derive(Error({}))]
+
 
 #[derive(Debug, PartialEq, Clone)]
 enum Status {
