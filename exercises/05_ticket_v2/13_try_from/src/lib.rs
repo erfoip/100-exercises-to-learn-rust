@@ -4,8 +4,10 @@
 use thiserror::Error;
 
 #[derive(Debug, thiserror::Error)]
-#[derive(Error({}))]
-
+#[error("{status_string} is not a valid string")]
+struct ParseStatusError {
+    status_string: String,
+}
 
 #[derive(Debug, PartialEq, Clone)]
 enum Status {
@@ -14,15 +16,27 @@ enum Status {
     Done,
 }
 
-impl TryFrom<String> for Status{
-    type Error = ();
+impl TryFrom<String> for Status {
+    type Error = ParseStatusError;
 
     fn try_from(value: String) -> Result<Self, Self::Error> {
+        value.as_str().try_into()
+    }
+}
+
+impl TryFrom<&str> for Status {
+    type Error = ParseStatusError;
+
+    fn try_from(value: &str) -> Result<Self, Self::Error> {
         match value.to_lowercase().as_str() {
             "todo" => Result::Ok(Status::ToDo),
             "inprogress" => Result::Ok(Status::InProgress),
             "done" => Result::Ok(Status::Done),
-            _ => Result::Err("Invalid String")
+            _ => Result::Err(
+                ParseStatusError {
+                    status_string: value.to_string()
+                }
+            )
         }
     }
 }
